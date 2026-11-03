@@ -12,7 +12,7 @@
 - REES46 events in the electronics store, Oct 2019–Feb 2020. Observational event log. One row represents a product event. This is **not** an orders table or a controlled experiment.
 - Kevin Hillstrom, MineThatData 2008. Randomized 3-arm e-mail experiment with 64,000 customers. Each row represents one randomly assigned customer. Pre-treatment covariates: recency, history, past mens/womens purchases, new customer indicator, ZIP area category, and channel. Post-treatment outcomes: visit, conversion, spend over two weeks.
 
-Do not join these independent populations. Do not extrapolate them as current G2A customer behavior.
+Do not join these independent populations. Do not extrapolate them to current customer behavior of any other business.
 
 ## KPI dictionary
 
@@ -59,4 +59,4 @@ Do not join these independent populations. Do not extrapolate them as current G2
 - Deterministic seeded bootstraps and synthetic smoke tests.
 - Per-run output path must be new/empty; SQL database is never silently overwritten.
 - SQLite ingests REES46 CSV in chunks to bound Python memory footprint. SQLite indices and aggregation may consume substantial disk/CPU for very large datasets.
-- Historical data cannot establish current G2A customer behavior; the sources are illustrations of transferable analytical methods.
+- Historical data cannot establish current customer behavior; the sources are illustrations of transferable analytical methods.

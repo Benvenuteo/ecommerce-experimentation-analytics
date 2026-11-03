@@ -7,7 +7,7 @@ An end-to-end reproducible analysis of two **independent** data sources:
 1. **REES46 electronics store** — historical `view`, `cart`, `purchase` events; session conversion, product categories, time series and quality checks.
 2. **Kevin Hillstrom / MineThatData (2008)** — a genuine, randomized 3-arm marketing experiment; difference in 2-week conversion, Holm multiplicity adjustment, revenue differences with bootstrap uncertainty and balance checks.
 
-The sources are **not from G2A**, and identities cannot be joined. Historical e-commerce event analytics are descriptive; only randomized experiment data supports a causal intent-to-treat comparison of the original campaigns. Currency for REES46 is deliberately labelled "source units" until confirmed in the data documentation. No claim to platform margin or campaign profit is made.
+The two sources are unrelated to each other and identities cannot be joined. Historical e-commerce event analytics are descriptive; only randomized experiment data supports a causal intent-to-treat comparison of the original campaigns. Currency for REES46 is deliberately labelled "source units" until confirmed in the data documentation. No claim to platform margin or campaign profit is made.
 
 ## Quick start — Windows PowerShell
 

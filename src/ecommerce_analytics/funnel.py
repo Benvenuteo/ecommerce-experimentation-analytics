@@ -193,7 +193,8 @@ def analyze_funnel(
             counters["potential_exact_duplicate_rows"] = int(duplicate_candidates)
             category.to_csv(output / "category_sales.csv", index=False)
             monthly.to_csv(output / "monthly_sales.csv", index=False)
-            denominator = lambda n, d: float(n / d) if d else None
+            def denominator(n: float, d: float) -> float | None:
+                return float(n / d) if d else None
             result = {
                 "dataset": "REES46 electronics events",
                 "source_kind": "synthetic_demo" if synthetic else "user_supplied_unverified",

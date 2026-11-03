@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import timedelta
 from pathlib import Path
 
 import numpy as np
@@ -19,7 +20,8 @@ def create_demo_data(output: Path, *, seed: int = 20261027) -> tuple[Path, Path]
     start = pd.Timestamp("2020-01-01", tz="UTC")
     for session_id in range(1_500):
         user_id = 1 + (session_id % 800)
-        begin = start + pd.Timedelta(days=int(rng.integers(0, 45)), minutes=int(rng.integers(0, 1440)))
+        offset_minutes = int(rng.integers(0, 45)) * 1440 + int(rng.integers(0, 1440))
+        begin = start + timedelta(minutes=offset_minutes)
         product_id = int(rng.integers(1, 150))
         brand = "generic-a" if product_id % 2 else "generic-b"
         category = "electronics.audio" if product_id % 3 else "electronics.smartphone"
@@ -31,7 +33,7 @@ def create_demo_data(output: Path, *, seed: int = 20261027) -> tuple[Path, Path]
                 stages.append("purchase")
         for step, event_type in enumerate(stages):
             events.append({
-                "event_time": (begin + pd.Timedelta(minutes=step * 2)).isoformat(),
+                "event_time": (begin + timedelta(minutes=step * 2)).isoformat(),
                 "event_type": event_type, "product_id": product_id,
                 "category_id": "1234567890123456789", "category_code": category,
                 "brand": brand, "price": price, "user_id": str(user_id),

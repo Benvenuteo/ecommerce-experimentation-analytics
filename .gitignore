@@ -10,3 +10,8 @@ outputs/*
 !outputs/.gitkeep
 .env
 .DS_Store
+.idea/
+.vscode/
+build/
+dist/
+.coverage
