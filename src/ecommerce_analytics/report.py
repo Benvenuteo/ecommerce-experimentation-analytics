@@ -790,7 +790,7 @@ footer{{padding:30px 0;color:var(--muted);border-top:1px solid #ddd;margin-top:4
 <p><strong>Business decision rule:</strong> before rolling out a campaign, assess adjusted significance, effect size, uncertainty, incremental spend and the unknown delivery and merchandise costs. A positive point estimate alone is not sufficient evidence of commercial gain.</p>
 <p><strong>Comparison scope:</strong> each treatment is compared with the no-email control. The report does not perform a direct statistical comparison between Mens E-Mail and Womens E-Mail.</p>
 <p><strong>Separation of datasets:</strong> REES46 customer identities and Hillstrom customer identities are unrelated and are never joined. Observational event analytics cannot establish the causal effect of emails. Experimental estimates cannot be transferred automatically to another marketplace or era.</p>
-<p><strong>Historical context:</strong> Hillstrom is a 2008 experiment. The REES46 event window is shown above. Neither dataset represents current G2A customers.</p>
+<p><strong>Historical context:</strong> Hillstrom is a 2008 experiment. The REES46 event window is shown above. Neither dataset represents current customers of any other business.</p>
 </section>
 
 <footer>Portfolio study · Python, SQL/SQLite, pandas, SciPy, statsmodels, Matplotlib · Reproducible outputs</footer>

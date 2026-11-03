@@ -9,6 +9,29 @@ An end-to-end reproducible analysis of two **independent** data sources:
 
 The two sources are unrelated to each other and identities cannot be joined. Historical e-commerce event analytics are descriptive; only randomized experiment data supports a causal intent-to-treat comparison of the original campaigns. Currency for REES46 is deliberately labelled "source units" until confirmed in the data documentation. No claim to platform margin or campaign profit is made.
 
+## Results (real data run)
+
+Full report: [examples/real_report.html](examples/real_report.html) (download and open locally; GitHub does not render HTML).
+
+**REES46 electronics store** (885,129 events, 490,633 identified sessions, 2020-09-24 to 2021-02-28; descriptive only)
+
+| Metric | Value |
+| --- | --- |
+| Session purchase rate | 4.96% (24,348 / 490,633) |
+| View → cart | 8.44% |
+| Cart → purchase | 49.72% |
+| Ordered full funnel | 4.20% |
+| Top category by gross item value | `computers.components.videocards`: 2.60M of 5.13M source units (~51%) |
+
+**Hillstrom randomized experiment** (64,000 customers, SRM p = 0.904, all baseline |SMD| < 0.01)
+
+| Arm vs. no-email control | Conversion | Lift (pp) | 95% CI (pp) | Holm p | Δ spend / customer |
+| --- | --- | --- | --- | --- | --- |
+| Mens E-Mail | 1.25% vs 0.57% | +0.68 | [0.50, 0.86] | <0.0001 | $0.77 [0.51, 1.05] |
+| Womens E-Mail | 0.88% vs 0.57% | +0.31 | [0.15, 0.47] | 1.6e-4 | $0.42 [0.16, 0.68] |
+
+Caveats: no costs or margins, so no ROI claim; Mens vs Womens not tested directly; ~27% of events lack a category code; 655 potential exact duplicate rows were kept (see methodology).
+
 ## Quick start — Windows PowerShell
 
 Requires Python 3.10+, an internet connection for package installation, and enough disk space for the source events + SQLite database.

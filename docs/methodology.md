@@ -9,7 +9,7 @@
 
 ## Data sources
 
-- REES46 events in the electronics store, Oct 2019–Feb 2020. Observational event log. One row represents a product event. This is **not** an orders table or a controlled experiment.
+- REES46 events in the electronics store, Sep 2020–Feb 2021 (observed event window in the analysed file). Observational event log. One row represents a product event. This is **not** an orders table or a controlled experiment.
 - Kevin Hillstrom, MineThatData 2008. Randomized 3-arm e-mail experiment with 64,000 customers. Each row represents one randomly assigned customer. Pre-treatment covariates: recency, history, past mens/womens purchases, new customer indicator, ZIP area category, and channel. Post-treatment outcomes: visit, conversion, spend over two weeks.
 
 Do not join these independent populations. Do not extrapolate them to current customer behavior of any other business.
