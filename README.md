@@ -1,5 +1,7 @@
 # E-commerce Experimentation & Customer Analytics
 
+[![CI](https://github.com/Benvenuteo/ecommerce-experimentation-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/Benvenuteo/ecommerce-experimentation-analytics/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
 **Portfolio study for Data Analyst roles: SQL · Python · Funnel Analytics · Experimentation · Business Metrics**
 
 An end-to-end reproducible analysis of two **independent** data sources:
@@ -30,7 +32,14 @@ Full report: [examples/real_report.html](examples/real_report.html) (download an
 | Mens E-Mail | 1.25% vs 0.57% | +0.68 | [0.50, 0.86] | <0.0001 | $0.77 [0.51, 1.05] |
 | Womens E-Mail | 0.88% vs 0.57% | +0.31 | [0.15, 0.47] | 1.6e-4 | $0.42 [0.16, 0.68] |
 
-Caveats: no costs or margins, so no ROI claim; Mens vs Womens not tested directly; ~27% of events lack a category code; 655 potential exact duplicate rows were kept (see methodology).
+<p>
+<img src="docs/img/funnel_reach.png" width="48%" alt="Session stage reach">
+<img src="docs/img/monthly_value.png" width="48%" alt="Monthly gross purchase-item value">
+<img src="docs/img/experiment_conversion.png" width="48%" alt="Conversion rate by arm">
+<img src="docs/img/experiment_lift_ci.png" width="48%" alt="Lift confidence intervals">
+</p>
+
+Caveats: no costs or margins, so no ROI claim; Mens vs Womens not tested directly; 27% of events lack a category code (`[unknown]` is the 2nd-largest category by value, ~9.6%); 655 potential exact duplicate rows were kept (see methodology).
 
 ## Quick start — Windows PowerShell
 
@@ -120,7 +129,3 @@ ruff check src tests
 ```
 
 GitHub Actions validates lint, unit/integration tests and a complete offline demo run. Demo generation is deterministic. A full real-data report requires the original source files; no real-data performance or business-effect claims are made before they are processed.
-
-## Next extension — BI dashboard
-
-The exported category, monthly and experiment CSVs, plus `events.sqlite`, form a semantic base for a Power BI dashboard. Recommended pages: Executive KPIs, Product Funnel, Sales by Category, Experiment Evaluation and Data Quality. Rebuild in Power BI using the documented KPI definitions, not inferred order counts.

@@ -18,7 +18,7 @@ Original publication:
 https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html
 
 Historical direct CSV:
-http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv
+https://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv
 
 Alternative documentation and loader:
 https://www.tensorflow.org/datasets/catalog/hillstrom
@@ -28,3 +28,7 @@ https://www.kaggle.com/datasets/bofulee/kevin-hillstrom-minethatdata-e-mailanaly
 
 Save the original CSV as `data/raw/hillstrom.csv`. Preserve its field names and all three experimental arms. Do not commit the raw download by default; original redistribution license must be reviewed separately from public accessibility. Cite Kevin Hillstrom / MineThatData in any published analysis.
 
+
+## Provenance of the published results
+
+The results in the README and `examples/real_report.html` were computed from the original files obtained from the sources above (REES46 `electronics-events.csv.gz`, Hillstrom `hillstrom.csv`). The pipeline validates schema but cannot verify file origin, hence the notice in the report header.
